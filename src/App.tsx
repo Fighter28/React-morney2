@@ -1,26 +1,59 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+    HashRouter as Router,
+    Routes,
+    Route,
+    Link,
+    Navigate
+} from 'react-router-dom';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            <div>
+                <nav>
+                    <ul>
+                        <li>
+                            <Link to="/tags">标签页</Link>
+                        </li>
+                        <li>
+                            <Link to="/money">记账页</Link>
+                        </li>
+                        <li>
+                            <Link to="/statistics">统计页</Link>
+                        </li>
+                    </ul>
+                </nav>
+
+                <Routes>
+                    <Route path="/tags" element={<Tags/>}/>
+                    <Route path="/money" element={<Money/>}/>
+                    <Route path="/statistics" element={<Statistics/>}/>
+                    <Route path="/" element={<Navigate replace to="/money"/>}/>
+                    <Route path="*" element={<NoMatch/>}/>
+                </Routes>
+            </div>
+        </Router>
+    );
 }
+
+function NoMatch() {
+    return (
+        <div>页面不存在</div>
+    );
+}
+
+function Statistics() {
+    return <h2>统计页面</h2>;
+}
+
+function Tags() {
+    return <h2>标签页面</h2>;
+}
+
+function Money() {
+    return <h2>记账页面</h2>;
+}
+
 
 export default App;
