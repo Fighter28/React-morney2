@@ -6,12 +6,48 @@ import {
     Link,
     Navigate
 } from 'react-router-dom';
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  border: 1px solid red;
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+`;
+const Main = styled.div`
+  border: 1px solid green;
+  flex-grow: 1;
+  overflow: auto;
+`;
+const Nav = styled.nav`
+  border: 1px solid blue;
+
+  > ul {
+    display: flex;
+
+    > li {
+      width: 33.33333%;
+      text-align: center;
+      padding: 16px;
+    }
+  }
+`;
 
 function App() {
     return (
         <Router>
-            <div>
-                <nav>
+            <Wrapper>
+                <Main>
+                    <Routes>
+                        <Route path="/tags" element={<Tags/>}/>
+                        <Route path="/money" element={<Money/>}/>
+                        <Route path="/statistics" element={<Statistics/>}/>
+                        <Route path="/" element={<Navigate replace to="/money"/>}/>
+                        <Route path="*" element={<NoMatch/>}/>
+                    </Routes>
+                </Main>
+                <Nav>
                     <ul>
                         <li>
                             <Link to="/tags">标签页</Link>
@@ -23,16 +59,8 @@ function App() {
                             <Link to="/statistics">统计页</Link>
                         </li>
                     </ul>
-                </nav>
-
-                <Routes>
-                    <Route path="/tags" element={<Tags/>}/>
-                    <Route path="/money" element={<Money/>}/>
-                    <Route path="/statistics" element={<Statistics/>}/>
-                    <Route path="/" element={<Navigate replace to="/money"/>}/>
-                    <Route path="*" element={<NoMatch/>}/>
-                </Routes>
-            </div>
+                </Nav>
+            </Wrapper>
         </Router>
     );
 }
