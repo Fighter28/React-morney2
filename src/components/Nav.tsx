@@ -3,7 +3,6 @@ import {Link} from 'react-router-dom';
 import React from 'react';
 import Icon from './icon';
 
-
 const NavWrapper = styled.nav`
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
   line-height: 24px;
