@@ -3,7 +3,6 @@ import {
     HashRouter as Router,
     Routes,
     Route,
-    Link,
     Navigate
 } from 'react-router-dom';
 import styled from 'styled-components';
