@@ -39,3 +39,8 @@ button{
   height: 1em;
   display: block;
 }
+.clearfix::after{
+  content:'';
+  display: block;
+  clear: both;
+}
