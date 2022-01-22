@@ -18,36 +18,65 @@ const TagsSection = styled.section`
       margin: 8px 12px
     }
   }
-  > button{
+
+  > button {
     background: none;
-    border:none;
+    border: none;
     border-bottom: 1px solid #333;
     padding: 2px 4px;
-    color:#666;
+    color: #666;
     margin-top: 10px;
   }
 `;
 const NotesSection = styled.section`
-background: #f5f5f5;
-  padding:0 16px;
+  background: #f5f5f5;
+  padding: 0 16px;
   font-size: 14px;
-  > label{
-    display:flex;
+
+  > label {
+    display: flex;
     align-items: center;
-    > span{
+
+    > span {
       margin-right: 16px;
       white-space: nowrap;
-      }
-    > input{
+    }
+
+    > input {
       display: block;
       width: 100%;
       height: 72px;
-      border:none;
+      border: none;
       background: none;
     }
   }
 `;
-const CateGorySection = styled.section``;
+const CateGorySection = styled.section`
+  font-size: 24px;
+
+  > ol {
+    display: flex;
+    background: #c4c4c4;
+
+    > li {
+      width: 50%;
+      text-align: center;
+      padding: 18px 0;
+      position: relative;
+
+      &.selected::after {
+        content: '';
+        height: 3px;
+        display: block;
+        background: #333;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        left:0;
+      }
+    }
+  }
+`;
 const NumberPadSection = styled.section``;
 
 function Money() {
@@ -65,12 +94,12 @@ function Money() {
             <NotesSection>
                 <label>
                     <span>备注</span>
-                    <input type="text" placeholder='在这里添加备注'/>
+                    <input type="text" placeholder="在这里添加备注"/>
                 </label>
             </NotesSection>
-            <CateGorySection>
+            <CateGorySection >
                 <ol>
-                    <li>支出</li>
+                    <li className='selected'>支出</li>
                     <li>收入</li>
                 </ol>
             </CateGorySection>
