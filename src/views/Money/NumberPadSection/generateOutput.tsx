@@ -22,10 +22,8 @@ const generateOutput = (text: string, output = '0') => {
                 return (output.slice(0, -1) || ' ');
             }
         case '.':
-            if (output.indexOf('.') >= 0) {
-                return output;
-            }
-            return (output + '.');
+            if (output.indexOf('.') >= 0) {return output}
+            return output + '.';
         case '清空':
             return '';
         default:
