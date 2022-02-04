@@ -1,5 +1,5 @@
 import React from 'react';
-import {useParams} from 'react-router-dom';
+import {useParams, useNavigate} from 'react-router-dom';
 import {useTags} from 'useTags';
 import Layout from 'components/Layout';
 import Icon from '../components/icon';
@@ -46,10 +46,13 @@ const Tag: React.FC = () => {
             </Center>
         </div>
     );
+    const navigate = useNavigate();
     return (
         <Layout>
             <Topbar>
-                <Icon fill="black" name="left"/>
+                <Icon fill="black" name="left" onClick={() => {
+                    navigate('../tags', {replace: true});
+                }}/>
                 <span>编辑标签</span>
                 <Icon fill="white"/>
             </Topbar>

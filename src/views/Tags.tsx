@@ -15,7 +15,8 @@ const TagList = styled.ol`
     line-height: 20px;
     margin-left: 16px;
     border-bottom: 1px solid #d5d5d9;
-    > a{
+
+    > a {
       display: flex;
       padding: 12px 16px 12px 0;
       justify-content: space-between;
@@ -26,7 +27,7 @@ const TagList = styled.ol`
 
 
 function Tags() {
-    const {tags} = useTags();
+    const {tags, addTag} = useTags();
     return (
         <Layout>
             <TagList>
@@ -40,7 +41,7 @@ function Tags() {
             <Center>
                 <Space/>
                 <Space/>
-                <Button>新增标签</Button>
+                <Button onClick={addTag}>新增标签</Button>
                 <Space/>
             </Center>
         </Layout>
