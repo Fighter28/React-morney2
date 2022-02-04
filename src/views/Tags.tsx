@@ -1,10 +1,12 @@
-import Layout from '../components/Layout';
+import Layout from 'components/Layout';
 import React from 'react';
 import {useTags} from 'useTags';
 import styled from 'styled-components';
-import Icon from '../components/icon';
+import Icon from 'components/icon';
 import {NavLink} from 'react-router-dom';
 import {Button} from 'components/Button';
+import {Center} from 'components/Center';
+import {Space} from '../components/Space';
 
 const TagList = styled.ol`
   font-size: 16px;
@@ -22,15 +24,6 @@ const TagList = styled.ol`
   }
 `;
 
-const Center = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-`;
-const Space = styled.div`
-  height: 48px;
-`;
 
 function Tags() {
     const {tags} = useTags();
