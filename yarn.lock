@@ -2962,6 +2962,11 @@ class-utils@^0.3.5:
     isobject "^3.0.0"
     static-extend "^0.1.1"
 
+classnames@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.npmmirror.com/classnames/-/classnames-2.3.1.tgz#dfcfa3891e306ec1dad105d0e88f4417b8535e8e"
+  integrity sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==
+
 clean-css@^5.2.2:
   version "5.2.2"
   resolved "https://registry.npmmirror.com/clean-css/download/clean-css-5.2.2.tgz?cache=0&sync_timestamp=1634992314911&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fclean-css%2Fdownload%2Fclean-css-5.2.2.tgz#d3a7c6ee2511011e051719838bdcf8314dc4548d"
@@ -3457,6 +3462,11 @@ data-urls@^2.0.0:
     abab "^2.0.3"
     whatwg-mimetype "^2.3.0"
     whatwg-url "^8.0.0"
+
+dayjs@^1.10.7:
+  version "1.10.7"
+  resolved "https://registry.npmmirror.com/dayjs/-/dayjs-1.10.7.tgz#2cf5f91add28116748440866a0a1d26f3a6ce468"
+  integrity sha512-P6twpd70BcPK34K26uJ1KT3wlhpuOAPoMwJzpsIWUxHZ7wpmbdZL/hQqBDfz7hGurYSa5PhzdhDHtt319hL3ig==
 
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.9:
   version "2.6.9"
@@ -6451,10 +6461,10 @@ node-releases@^2.0.1:
   resolved "https://registry.npmmirror.com/node-releases/download/node-releases-2.0.1.tgz?cache=0&sync_timestamp=1634806914912&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fnode-releases%2Fdownload%2Fnode-releases-2.0.1.tgz#3d1d395f204f1f2f29a54358b9fb678765ad2fc5"
   integrity sha1-PR05XyBPHy8ppUNYuftnh2WtL8U=
 
-"node-sass@npm:dart-sass":
+"node-sass@npm:dart-sass@^1.25.0":
   version "1.25.0"
-  resolved "https://registry.npmmirror.com/dart-sass/download/dart-sass-1.25.0.tgz#e00c0348118916e9d81cb485297184c131af1dad"
-  integrity sha1-4AwDSBGJFunYHLSFKXGEwTGvHa0=
+  resolved "https://registry.npmmirror.com/dart-sass/-/dart-sass-1.25.0.tgz#e00c0348118916e9d81cb485297184c131af1dad"
+  integrity sha512-syNOAstJXAmvD3RifcDk3fiPMyYE2fY8so6w9gf2/wNlKpG0zyH+oiXubEYVOy1WAWkzOc72pbAxwx+3OU4JJA==
   dependencies:
     chokidar ">=2.0.0 <4.0.0"
 
