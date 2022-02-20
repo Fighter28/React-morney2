@@ -16,7 +16,7 @@ export const useRecords = () => {
     },[]);
     useUpdate(() => {
         window.localStorage.setItem('records', JSON.stringify(records));
-    }, [records]);
+    }, records);
     const addRecord = (newRecord: newRecordItem) => {
         if (newRecord.amount <= 0) {
             alert('不能输入数值为0的项目');
